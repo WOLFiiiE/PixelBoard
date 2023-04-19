@@ -1,0 +1,65 @@
+
+for(let i=0; i<1369; i++) {
+
+    console.log('<button id="'+i+'" onclick="change("'+i+'")"></button>');
+    
+}
+
+/*
+                        <!--
+                        <div >
+                            <div>
+                                </span>CURRENT</span>
+                                <span></span>
+                            </div>
+                            <div>
+                                </span>PREVIOUS</span>
+                                <span></span>
+                            </div>
+                        </div>
+                        -->
+*/
+
+******
+
+GRIDSSS CONTROLLL 
+-IT CHANGES GRID COLOURS 
+-BUT IT LEAVES GAPS IN THE PIXELS
+
+function setGrids() {
+	let pixels=document.getElementsByTagName('button');
+	let gridsBtn=document.getElementById('gridsBtn');
+
+	let gridsColour=currColour;
+
+	gridsBtn.style.color=gridsColour;
+
+	for(var i=0; i<pixels.length ; i++)
+	{
+		pixels[i].style.borderColor = gridsColour;
+	}
+}
+
+******
+
+PLAY BUTTON ON INTRO
+############# I WASN'T FEELING IT :(
+
+btnPlay=1;
+
+function showPlay() {
+
+	var el=document.getElementById('playScreen');
+
+	if(btnPlay)
+	{
+		el.style.display="flex";
+		btnPlay=0;
+	}
+	else {
+		el.style.display="none";
+		btnPlay=1;
+	}
+
+} 
+*/

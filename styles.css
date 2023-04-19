@@ -1,30 +1,32 @@
 @font-face {
   font-family: Pixel01; 
-  src: url('PixelEmulator-xq08.ttf'); 
+  src: url('visual/PixelEmulator-xq08.ttf'); 
 }
 @font-face { 
   font-family: Pixel01; 
   font-weight: bold; 
-  src: url('PixelEmulator-xq08.ttf'); 
+  src: url('visual/PixelEmulator-xq08.ttf'); 
 }
 
 @font-face { 
   font-family: Pixel02; 
   font-weight: bold; 
-  src: url('Pixellium-v0Z9.ttf'); 
+  src: url('visual/Pixellium-v0Z9.ttf'); 
 }
 @font-face { 
   font-family: Pixel02; 
   font-weight: bold; 
-  src: url('Pixellium-v0Z9.ttf'); 
+  src: url('visual/Pixellium-v0Z9.ttf'); 
 }
 
+/*
 *{
     cursor: url(resizeCursor.gif), auto;
 }
+*/
 
 body {
-    background-image: url("background.gif");
+    background-image: url("visual/background.gif");
     background-color: #fcedf8;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -55,7 +57,7 @@ header{
     color: white;
     font-size: 15px;
 
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0px 5px 5px 5px #7d7c7d;
 
     background-color: #ff94df;
@@ -76,6 +78,63 @@ header{
 
 }
 
+.headingPart{
+	display: flex;
+	align-items: center;
+	flex-flow: row;
+
+	color: white;
+
+	width: 550px;
+}
+
+.author{
+	display: flex;
+	align-items: center;
+	justify-content: right;
+
+    font-family: Pixel02, sans-serif;
+
+	width: 60%;
+
+    margin-right: 5px;
+}
+
+#playPause{
+	width: 70%;
+	height: 70%;
+
+	filter: invert(100%);
+}
+
+#nextSong{
+	width: 50%;
+	height: 50%;
+
+	filter: invert(100%);
+}
+
+
+#soundButton{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 20px;
+	width: 20px;
+
+    border-radius: 20px;
+
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+
+	background-color: rgba(0, 0, 0, 0);
+
+	border: 1px solid white;
+}
+
+
+
 .headerName{
     padding: 0;
 
@@ -92,8 +151,9 @@ header{
 
 b{
     font-weight: bolder;
-
     transition: ease 2s;
+
+    cursor: default;
 }
 
 b:hover{
@@ -105,51 +165,92 @@ b:hover{
     justify-content: center;
     align-items: center;
 
-    /*border: 2px solid red;*/
-
-    /*margin: auto;*/
-
     height: 700px;
+}
 
+#pg01{
+    display: flex;
+}
+
+#pg02{
+    display: none;
 }
 
 .inner{
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    flex-direction: column;
+    flex-direction: row;
 
     background-color: #dbdbdb;
     box-shadow: 0px 5px 5px 5px #7d7c7d;
-    border-radius: 20px;
+    border-radius: 10px;
 
     border: 2px solid #ff94df;
 
-    width: 700px;
+    width: 65%;
     height: 600px;
 
 
 }
 
-.board{
-    /*
-    display: flex;
-    flex-wrap: wrap;
-    */
+#board{
 
     display: grid;
-    grid-template-columns: repeat(33, auto);
+    grid-template-columns: repeat(37, auto);
     grid-gap: 0;
 
-    width: 590px;
-    height: 394px;
+    width: 550px;
+    height: 550px;
+
+    border: 1px solid black;
+    background-color: white;
+}
+
+#intro{
+    display: flex;
+
+    background-image: url("visual/intro.gif");
+    background-color: lightgoldenrodyellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+
+    width: 550px;
+    height: 550px;
 
     border: 1px solid black;
 
-    /*padding: 3px;*/
-    /*border-radius: 20px;*/
-    /*border: 2px solid #ff94df;*/
+    transition: ease 5s;
+}
+
+#intro:hover{
+    background-position: right;
+}
+
+#intro div{
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#intro div img{
+    height: 40%;
+    width: 40%;
+
+    filter: brightness(100000%);
+
+    transition: ease 1s;
+}
+
+#intro div img:hover {
+
+    transform: scale(1.3);
 }
 
 .controls{
@@ -157,44 +258,78 @@ b:hover{
     justify-content: center;
     align-items: center;
 
-    flex-direction: row;
+    flex-direction: column;
 
     padding: 0;
     margin-top: 10px;
 
-    width: 600px;
-    height: 120px;
-
-    /*border-radius: 20px;*/
-    /*border: 2px solid black;*/
+    width: 30%;
+    height: 550px;
 }
 
 button{
+    display: inline-grid;
     background-color: white;
     border: 1px solid black;
     cursor: pointer;
 
-/*
-    ########OLD CODE######### 
+    margin: 0;
+}
 
-    margin: -5px;
+.greetings{
+    display: flex;
+    flex-direction: column;
 
-    height: 3.33%;
-    width: 3.4%;
+    height: 30%;
+    width: 240px;
 
+    margin: 0;
 
-    height: 20px;
-    width: 20px;
-*/
+    background-color: rgba(255, 148, 212, 0.6);
+    border-radius: 20px;
+    border: 2px solid #ff94df;
+
+    color: white;
+    text-align: center;
+    font-family: Pixel02, sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.rainbow{
+    animation-name: colorchange;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colorchange;
+    -webkit-animation-duration: 5s;
+}
+
+@keyframes colorchange {
+    0% {color: #6209D4; }
+    20% {color: #08C6CD; }
+    40% {color: #FECD70; }
+    60% {color: #5E0792; }
+    80% {color: #E136A7; }
+    100% {color: #FF9F6F; }    
+}
+
+@-webkit-keyframes colorchange {
+    0% {color: #6209D4; }
+    20% {color: #08C6CD; }
+    40% {color: #FECD70; }
+    60% {color: #5E0792; }
+    80% {color: #E136A7; }
+    100% {color: #FF9F6F; }     
 }
 
 .colours{
     display: flex;
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 
-    height: 90%;
+    height: 30%;
     width: 240px;
 
     margin: 0;
@@ -213,14 +348,46 @@ button{
 .colourThing{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
 
-    height: 200px;
+    margin: 0;
+
+    height: 30%;
     width: 220px;
 
+}
+
+.colourThing div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    padding-left: 5%;
     margin: 0;
-    /*border: 2px solid red*/
+}
+
+.currPrev {
+
+    width: 35%;
+    height: 80%;
+
+    background-color: pink;
+
+    border-radius: 10px;
+    border: 1px solid black;
+
+    cursor: pointer;
+}
+
+.currPrev span {
+    height: 100%;
+    width: 45%;
+
+    background-color: pink;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
 }
 
 h2{
@@ -229,38 +396,34 @@ h2{
 }
 
 #colourButton{
-    display: flex;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 
 
-    width: 30px;
-    height: 20px;
+    width: 20%;
+    height: 80%;
 
     margin: 5px;
 
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
 
     background-color: hotpink;
+
+    cursor: pointer;
 }
 
 #colourPicker{
-    height: 20px;
-    width: 130px;
+    height: 80%;
+    width: 60%;
 
-    border-radius: 5px;
+    border-radius: 10px;
 
     background-color: lightgoldenrodyellow;
     margin: 5px;
+
+    cursor: pointer;
 }
-
-form{
-    /*margin-top: -5px;
-    border: 2px solid red;*/
-}
-
-
 
 .cuteThing{
     display: flex;
@@ -268,21 +431,20 @@ form{
 
     background-color: rgba(250, 250, 210, 0.8);
 
-    height: 90%;
-    width: 140px;
+    height: 30%;
+    width: 60%;
     margin: 20px;
 
     padding: 0;
 
-    /*
-    background-image: url("https://64.media.tumblr.com/afe3c22217ae6b1d87e63dbe28f65d0d/tumblr_ml2ir92uvU1rfjowdo1_500.gifv");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    */
-
     border-radius: 20px;
     border: 2px solid #ff94df;
+
+    transition: ease 2s;
+}
+
+.cuteThing:hover {
+    transform: scale(110%);
 }
 
 #bunny{
@@ -290,26 +452,55 @@ form{
     height: 100%;
 }
 
-.clearFill{
+.bunny{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    height: 95%;
-    width: 240px;
+    height: 35%;
+    width: 90%;
 
     background-color: rgba(255, 148, 212, 0.6);
 
     border-radius: 20px;
     border: 2px solid #ff94df;
+
+}
+
+.menu01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 35%;
+    width: 90%;
+
+    background-color: rgba(255, 148, 212, 0.6);
+
+    border-radius: 20px;
+    border: 2px solid #ff94df;
+
+}
+
+.menu01 div{
+    display: flex;
 }
 
 .controlButton{
-    height: 27%;
+    align-items: center;
+    justify-content: center;
+
+    height: 20%;
     width: 200px;
 
-    margin: 2px;
+    margin: 5px;
 
     background-color: #ffd9fb; /*#fbfca9;*/
     border: 1px solid black;
@@ -318,13 +509,18 @@ form{
     color: white;
     text-align: center;
     font-family: Pixel02, sans-serif;
-    font-size: 17px;
+    font-size: 30px;
     font-weight: bolder;
+
+    cursor: pointer;
 
 }
 
 .controlButton01{
-    height: 27%;
+    align-items: center;
+    justify-content: center;
+
+    height: 20%;
     width: 200px;
 
     margin: 2px;
@@ -336,8 +532,53 @@ form{
     color: white;
     text-align: center;
     font-family: Pixel02, sans-serif;
-    font-size: 17px;
+    font-size: 30px;
     font-weight: bolder;
+
+    cursor: pointer;
+
+}
+
+.controlButton b,a{
+    cursor: pointer;
+}
+
+
+.controlButton01 select{
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+
+    color: white;
+    text-align: center;
+    font-family: Pixel02, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.controlButton01 select option{
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+
+    color: #ff94df;
+    text-align: center;
+    font-family: Pixel02, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+
+    cursor: pointer;
+} 
+
+.controlButton01 select option:hover{
+    background-color: cyan;
 }
 
 .controlButton:hover{
@@ -345,3 +586,32 @@ form{
     color: #ffd9fb;
 }
 
+#m1{
+    display: flex;
+} 
+
+#m2{
+    display: none;
+} 
+
+#nextMenu{
+    display: flex;
+}
+
+#nextMenu {
+    background-color: cyan;
+}
+
+#nextMenu:hover {
+    color: cyan;
+    background-color: lightgoldenrodyellow;
+}
+
+#bgColour{
+    cursor: pointer;
+}
+
+#gridsBtn{
+    cursor: pointer;
+    /*color: black;*/
+}
