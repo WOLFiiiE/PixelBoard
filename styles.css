@@ -181,7 +181,7 @@ b:hover{
     }
 
     b{
-        font-size: 80%;
+        font-size: 60%;
     }
 
     h1{
@@ -215,11 +215,15 @@ b:hover{
         display: flex;
     }
 
+    #pg02{
+        display: none;
+    }
+
     .outer{
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         height: 650px;
     }
 
@@ -227,10 +231,6 @@ b:hover{
         display: none;
     }
  }
-
-#pg02{
-    display: none;
-}
 
 .inner{
     justify-content: space-around;
