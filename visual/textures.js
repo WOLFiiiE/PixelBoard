@@ -527,9 +527,21 @@ function textures(code) {
 	let reaction=document.createElement('img');
 	reaction.id="bunny";
 
-    if(code=="MARYAM")
+	let str="M$$$%#A$$$####R%%$$%Y#$A#%M";
+	let str2="";
+
+
+	for(let i=0; i<str.length;i++)
+	{
+		if(str[i]!='#' && str[i]!='%' && str[i]!='#' && str[i]!='$')
+		{
+			str2+=str[i];
+		}
+	}
+
+    if(code==str2)
     {
-		// I MISS YOU
+		//MESSAGE
 
 		miss.innerHTML="♡ I MISS YOU ♡ <br/> <b>♡ SOOOOOO ♡</b> <br/> ♡ MUCH ♡";
 		el.replaceWith(miss);

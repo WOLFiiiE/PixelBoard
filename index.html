@@ -31,10 +31,9 @@
 
         <!-- HEADING -->
         <header>
-            <div class="header"> 
-                <div class="contain">                             
-                    
-                    <span class="headerName">❤ <b>P</b><b>i</b><b>x</b><b>e</b><b>l</b><b>B</b><b>o</b><b>a</b><b>r</b><b>d</b> ❤</span>
+                <div class="contain"> 
+                                                                    
+                    <span class="headerName"><b>❤</b><b> </b><b>P</b><b>i</b><b>x</b><b>e</b><b>l</b><b>B</b><b>o</b><b>a</b><b>r</b><b>d</b><b> </b><b>❤</b></span>
                     
                     <div class="headingPart">
                         <span  class="author">
@@ -52,12 +51,19 @@
                         </span>
                     </div>
 
-                </div> 
-            <div>            
+                </div>            
         </header>
 
         <!--- THE BOARD -->
         <div class="outer">
+
+            <!--- USE PC  -->
+            <div id="warning">
+                <h1> ૮╥﹏╥ა </h1>
+                <h2>YOU ARE USING MOBILE</h2>
+                <h2>USE A PC OR DISPLAY THAT IS WIDER THAN 850 PIXELS</h2>
+            </div>   
+
 
             <!--- PAGE 1 -->
             <div id="pg01" class="inner">
@@ -84,7 +90,7 @@
 
                     <div class="menu01">
                         <div class="controlButton" onclick="nextPage()"><b>♡ START ♡</b></div>
-                        <div id="music" class="controlButton" onclick="playMusic()">♡ MUSIC: ON ♡</div>
+                        <div id="music" class="controlButton" onclick="playMusic()">♡ MUSIC: OFF ♡</div>
                         <div class="controlButton01"><a href="https://github.com/WOLFiiiE" target="_blank">♡ GITHUB ♡</a></div>
                     </div>
                 </div>
@@ -126,7 +132,7 @@
                         <div id="m1" class="controlButton" onclick="clearAllPixels()">♡ ERASE ALL ♡</div>
                         <div id="m1" class="controlButton01" onclick="fillAllPixels()">♡ FILL ♡</div>
                         <div id="m2" class="controlButton" onclick="setBgColour()"><span id="bgColour">♡ BG COLOUR ♡</span></div>
-                        <div id="m2" class="controlButton" onclick="setGrids()"><span id="gridsBtn">♡ GRIDS: OFF ♡</span></div>
+                        <div id="m2" class="controlButton" onclick="setGrids()"><span id="gridsBtn">♡ GRIDS: ON ♡</span></div>
                         <div id="m2" class="controlButton01">
                             <select name="resSelect" id="resolution" onchange="setResolution()">
                                 <option value="LOW">♡ RES: LOW ♡</option>

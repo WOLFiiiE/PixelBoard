@@ -44,14 +44,13 @@ header{
 
     height: 120px;
     width: 100%;
-
-    /*border: 2px solid red ;*/
 }
 
-.header{
+.contain{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     font-family: Pixel02, sans-serif;
     color: white;
@@ -65,19 +64,6 @@ header{
     width: 90%;
 }
 
-.contain{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    background-color: #ff94df;
-
-    height: 70%;
-    width: 600px;
-
-}
-
 .headingPart{
 	display: flex;
 	align-items: center;
@@ -86,6 +72,7 @@ header{
 	color: white;
 
 	width: 550px;
+
 }
 
 .author{
@@ -160,17 +147,86 @@ b:hover{
     color: deeppink;
 }
 
-.outer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 850px) {
+    #pg01{
+        display: none;
+    }
 
-    height: 700px;
-}
+    #pg02{
+        display: none;
+    }
 
-#pg01{
-    display: flex;
-}
+    .outer{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+    
+        height: 650px;
+    }
+
+    .contain{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        font-family: Pixel02, sans-serif;
+        color: white;
+        font-size: 15px;
+    
+        box-shadow: 0px 5px 5px 5px #7d7c7d;
+    
+        background-color: #ff94df;
+        height: 100px;
+        width: 90%;
+    }
+
+    b{
+        font-size: 80%;
+    }
+
+    h1{
+        font-size: 60px;
+        margin: 0;
+
+    }
+
+
+    #warning{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+        font-family: Pixel02, sans-serif;
+        color: red;
+        text-align: center;
+
+        background-color: #dbdbdb;
+        border: 3px solid red ;
+        border-radius: 10px;
+
+        width: 80%;
+        height: 30%;
+    }
+ }
+
+ @media screen and (min-width: 851px) {
+    #pg01{
+        display: flex;
+    }
+
+    .outer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        height: 650px;
+    }
+
+    #warning{
+        display: none;
+    }
+ }
 
 #pg02{
     display: none;

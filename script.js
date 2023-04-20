@@ -51,8 +51,6 @@ function nextPage() {
 	}
 }
 
-
-
 function playMusic() {
 
 	let song= document.getElementById('theme');
@@ -61,12 +59,12 @@ function playMusic() {
 
 	if(song.paused) {
 		song.play();
-		musicBtn.innerHTML="♡ MUSIC: OFF ♡"
+		musicBtn.innerHTML="♡ MUSIC: ON ♡"
 		playPauseBtn.src="visual/soundOff.png"			
 	}
 	else {
 		song.pause();
-		musicBtn.innerHTML="♡ MUSIC: ON ♡"
+		musicBtn.innerHTML="♡ MUSIC: OFF ♡"
 		playPauseBtn.src="visual/soundOn.png"
 	}
 
@@ -230,7 +228,7 @@ function setGrids() {
 	let gridsBtn=document.getElementById('gridsBtn');
 
 	if(grids) {
-		gridsBtn.innerHTML="♡ GRIDS: ON ♡";
+		gridsBtn.innerHTML="♡ GRIDS: OFF ♡";
 
 		for(var i=0; i<pixels.length ; i++)
 		{
@@ -239,7 +237,7 @@ function setGrids() {
 		grids=0;
 	}
 	else {
-		gridsBtn.innerHTML="♡ GRIDS: OFF ♡";
+		gridsBtn.innerHTML="♡ GRIDS: ON ♡";
 
 		for(var i=0; i<pixels.length ; i++)
 		{
